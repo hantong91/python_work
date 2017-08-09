@@ -93,4 +93,9 @@ friends=["cat","dog","elephant","snake","frog"]
 for item in friends:
     print item
 
+print "--------"
+
+for i in range(len(friends)):
+    print friends[i]
+
 print "Step04_list 모듈의 실행순서가 종료 됩니다."

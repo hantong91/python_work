@@ -15,7 +15,7 @@ class Car:                                   # public class Car(){
                                                         #}
     #메소드
     def showInfo(self):
-        # self 에는 객체의 참조값이 전달된다.
+        # self 에는 객체의 참조값이 전달된다.     예약어는 아니지만 자신의 객체참조값이 담긴 변수
         print u"차의 이름:", self.name
             
 if __name__ == '__main__':

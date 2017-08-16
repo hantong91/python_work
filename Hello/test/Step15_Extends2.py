@@ -19,12 +19,33 @@ class Car(object):
             print "엔진이 없어서 달릴수가 없어요"
         else:
             print "달려요"
+'''
+public class car {
+        public String engine;
+        
+        public car(){}
+        public car (String engine){
+            this.engine= engine;
+        }
+        public void drive(){
+            if(this.engine== null){
+            System.out.println("없어서 못달림");
+            }else{
+            System.out.println("달림");
+            }
+        }    
+    public static void main(String[] args) {
+        new car().drive();
+        new car("엔진").drive();
+    }
+}
 
+'''
 class SuperCar(Car):
     #생성자
     def __init__(self, engine):
         #부모생성자(Car 생성자) 로 필요한 값을 넘겨준다.
-        #super(SuperCar, self).__init__(engine) # phthon 2.7 문법
+        #super(SuperCar, self).__init__(engine) # python 2.7 문법
         Car.__init__(self, engine) # 이거나 위에나 같음 아래가 더 기억하기 편하다고함
     
     def driveFast(self):

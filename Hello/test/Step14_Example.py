@@ -42,7 +42,7 @@ if __name__ == '__main__':
     #Coffee 객체 리턴 받아서 eat()메소드 호출
     star1.getCoffee().eat()
     #StarBucks 구로지점에서 Coffee 객체 5개를list type 으로 받기
-    myCoffee = star1.getCoffee(5)
+    myCoffee = star1.getCoffees(5)
     print "-------------"
     
     #list type 에 들어있는 모든 Coffee 객체의 메소드

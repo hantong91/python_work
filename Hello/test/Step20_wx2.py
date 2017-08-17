@@ -73,7 +73,7 @@ class MyFrame(wx.Frame):
     만약 java였으면
     
     class MyFrame extends Frame{
-        TextField txtA null;
+        TextField txtA= null;
 
         public MyFrame(){
 

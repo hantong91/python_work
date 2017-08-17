@@ -75,7 +75,7 @@ print numbers2[0:2] # 0번 인덱스 이상 2번 인덱스 미만
 print numbers2
 print numbers2[3:5]
 print numbers2[-5:-1] #맨처음 인덱스가 0 이고 가장나중의 인덱스는 -1이 된다. 그리고 0번인덱스로 올수록 -1씩증가
-
+print numbers2[-3:-1]
 
 print range(10)
 print range(20)
@@ -89,6 +89,9 @@ for i in range(10):
     print i
 
 friends=["cat","dog","elephant","snake","frog"]
+
+c= len(friends)
+print "type c:",type(c)
 
 for item in friends:
     print item

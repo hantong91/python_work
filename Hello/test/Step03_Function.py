@@ -18,7 +18,7 @@ def test3(a):
     
 test3(u"김구라")
 test3(999)   
-
+test3() # 전달안하면 오류가 난다.
 
 #함수의 인자를 2개 전달받는 함수
 def test4(arg1,arg2):

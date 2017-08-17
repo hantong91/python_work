@@ -22,3 +22,4 @@ if __name__ == '__main__':
     
     car1.showInfo()
     car2.showInfo()
+    Car(u"현대ss",u"소나타",u"검정색").showInfo()

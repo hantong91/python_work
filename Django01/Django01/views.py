@@ -7,6 +7,8 @@ Created on 2017. 8. 17.
 from django.shortcuts import render_to_response
 from django.http.response import HttpResponse
 
+# 여기는 action클래스 기능을 하는것같음
+
 # root 요청에 대한 응답을 할 메소드
 def index(request):
     

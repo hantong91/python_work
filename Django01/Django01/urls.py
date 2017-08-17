@@ -17,7 +17,7 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from Django01 import views
-
+# 여기가 mvc로 치면 마치 actionfactory 같은 곳인듯
 urlpatterns = [
     url(r"^$",views.index),
     # ^$ 시작끝사이 아무것도없음 즉 빈 요청에 대해서, views.index 참조

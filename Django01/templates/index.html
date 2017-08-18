@@ -3,12 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <title>template/index.html</title>
+<!-- static 폴더에 있는 css 로딩 시키기 -->
+<link rel="stylesheet" href="/static/css/bootstrap.css" />
 </head>
 <body>
 <h3>Hello Diango!</h3>
 
 <ul>
 	<li><a href="hello">hello</a></li>
+	<li><a href="test">test</a></li>
+	<li><a href="show_member">회원 한명의 정보 보기</a></li>
+	<li><a href="friends">친구 목록 보기</a></li>
+	<li><a href="members">회원 목록 보기</a></li>
+	<li><a href="detail?num=999">글 자세히 보기</a></li>
+	<li><a href="/game/play">링크 클릭후 주소창 확인!</a></li>
 </ul>
+<!--  post방식 전송을 하기 위해서는 csrf_token 이 필요하다. -->
+<form action="insert/" method="post">
+	{% csrf_token%}
+	<label for="msg">메세지</label>
+	<input type="text" name="msg" id="msg" />
+	<button type = "submit"> 전송</button>
+</form>
 </body>
 </html>

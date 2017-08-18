@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>templates/list.html</title>
+</head>
+<body>
+<h3> 메세지 목록입니다.</h3>
+<table>
+	<thead>
+		<tr>
+			<th>번호</th>
+			<th>내용</th>
+			<th>등록일</th>
+		</tr>
+	</thead>
+	<tbody>
+	{% for item in list %}
+		<tr>
+			<th>{{item.id}}</th>
+			<th>{{item.content}}</th>
+			<th>{{item.regdate}}</th>
+			
+		</tr>
+	{% endfor %}	
+	</tbody>
+</table>
+</body>
+</html>

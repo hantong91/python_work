@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>templates/member/insertform.html</title>
+</head>
+<body>
+<h3> 회원 추가 폼 입니다.</h3>
+<form action="/member/insert/" method="post">
+	{% csrf_token%} <!--  보안관련된거라보면됨 이거없으면 forbidden뜨면서 안됨  :CSRF 검증에 실패했습니다. 요청을 중단하였습니다. -->
+	<label for="name">이름</label>
+	<input type="text" name="name" id="name" />
+	<label for="addr">주소</label>
+	<input type="text" name="addr" id="addr" />
+	<button type ="submit">추가</button>
+</form>
+</body>
+</html>

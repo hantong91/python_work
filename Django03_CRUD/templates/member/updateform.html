@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>templates/member/updateform.html</title>
+</head>
+<body>
+<h3>회원 정보 수정 폼 입니다.</h3>
+<form action="/member/update/" method="post">
+	{% csrf_token %}
+	<input type="hidden" name="num" value="{{member.num}}"/>
+	<label for="name">이름</label>
+	<input type="text" name="name" value="{{member.name}}" />
+	<br />
+	<label for="addr">주소</label>
+	<input type="text" name = "addr" value="{{member.addr}}"/>
+	<br />
+	<button type ="submit">수정확인</button>
+	
+</form>
+</body>
+</html>

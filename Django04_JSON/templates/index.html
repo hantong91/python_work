@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>index.html</title>
+<link rel="stylesheet" href="/static/css/bootstrap.css" />
+</head>
+<body>
+<h3>인덱스 페이지입니다.</h3>
+<ul>
+	<li><a href="/json01/">JSON 응답 받기</a></li> <!-- 경로 헷갈리면 /그냥 붙이면 됨 -->
+	<li><a href="/json02/">JSON 응답 받기2</a></li>
+</ul>
+<button id="one">ajax 테스트(GET)</button>
+<button id="two">ajax 테스트2(POST)</button>
+<p>{% csrf_token %}</p> <!-- 이런 name 으로 -->
+<p>{{ csrf_token }}</p>	<!--  이런 밸류를 주어야댐 -->
+<script src="/static/js/jquery-3.2.0.js"></script>
+<script>
+	$("#one").click(function(){
+		$.ajax({
+			url:"/json01/",
+			method:"get",
+			success:function(data){
+				// data 는 object 이다. 
+				console.log(data);
+			}
+		});
+	});
+	
+	$("#two").click(function(){
+		$.ajax({
+			url:"/json03/",
+			method:"post",
+			data:{
+				csrfmiddlewaretoken:"{{csrf_token}}",
+				msg:"안녕 Django !"
+			},
+			success:function(data){
+				console.log(data)
+			}
+		});
+	});
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
